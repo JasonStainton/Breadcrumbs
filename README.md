@@ -1,0 +1,2 @@
+# Breadcrumbs
+Laravel breadcrumb generator
