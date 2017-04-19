@@ -1,0 +1,20 @@
+{
+    "name": "jasonstainton/breadcrumbs",
+    "description": "Breadcrumb generator for Laravel.",
+    "keywords": ["laravel", "model", "breadcrumbs"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Stainton"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JasonStainton\\Breadcrumbs\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
