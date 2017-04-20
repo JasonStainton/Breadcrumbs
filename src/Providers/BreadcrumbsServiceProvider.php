@@ -13,7 +13,7 @@ class BreadcrumbsServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/../../views' => resource_path('views/vendor/breadcrumbs'),
-        ]);
+        ], 'breadcrumbs');
 
         Blade::directive('breadcrumbs', function($expression)
         {
