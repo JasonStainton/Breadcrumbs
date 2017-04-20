@@ -16,7 +16,7 @@ class Renderer
 
 			if (
 				is_object($crumbOrArray) &&
-				in_array('JasonStainton\Breadcrumbs\BreadcrumbContract', class_implements($crumbOrArray, true))
+				in_array('JasonStainton\Breadcrumbs\Contracts\BreadcrumbContract', class_implements($crumbOrArray, true))
 			)
 			{
 				$new_crumbs = $crumbOrArray->getCrumbs();
