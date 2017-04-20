@@ -1,6 +1,6 @@
 <?php
 
-namespace JasonStainton\Breadcrumbs;
+namespace JasonStainton\Breadcrumbs\Contracts;
 
 interface BreadcrumbContract
 {
