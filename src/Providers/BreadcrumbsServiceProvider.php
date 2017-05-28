@@ -12,8 +12,12 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../views', 'breadcrumbs');
 
         $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('breadcrumbs.php'),
+        ], 'config');
+
+        $this->publishes([
             __DIR__ . '/../../views' => resource_path('views/vendor/breadcrumbs'),
-        ], 'breadcrumbs');
+        ], 'views');
 
         Blade::directive('breadcrumbs', function($expression)
         {
@@ -21,5 +25,10 @@ class BreadcrumbsServiceProvider extends ServiceProvider
         });
     }
 
-    public function register() {}
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/config.php', 'breadcrumbs'
+        );
+    }
 }

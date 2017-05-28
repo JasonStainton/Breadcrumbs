@@ -6,9 +6,17 @@ class Renderer
 {
 	public static function renderBreadcrumbs($crumbOrArray = null)
 	{
-		$breadcrumbs = [
-			url('/') => 'Home'
-		];
+		$breadcrumbs = [];
+
+		$prepend = config('breadcrumbs.prepended_breadcrumbs');
+
+		if ($prepend && is_array($prepend))
+		{
+			foreach ($prepend as $slug => $name)
+			{
+				$breadcrumbs[ url($slug) ] = $name;
+			}
+		}
 
 		if (!is_null($crumbOrArray))
 		{
